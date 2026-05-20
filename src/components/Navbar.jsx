@@ -1,8 +1,14 @@
-function Navbar() {
+import "../styles/searchInput.css"
+
+function Navbar({search, setSearch}) {
     return (
-        <div>
-            <h1>Це буде навбарчик</h1>
-        </div>
+        <>
+            <input type="text" 
+            className="search-input"
+            placeholder="Enter your movie..."
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}/>
+        </>
     )
 }
 

@@ -1,9 +1,10 @@
-function MovieCard() {
+function MovieCard({ movie, onMovieClick }) {
     return (
-        <div>
-            <h3>Це окрема картка для одного конкретного фільму.</h3>
+        <div className="movie-card" onClick={() => {onMovieClick(movie)}}>
+            <h3>{movie.title}</h3>
+            <img src={movie.image} alt={movie.title} />
         </div>
-    )
+  );
 }
 
 export default MovieCard
